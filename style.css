@@ -555,6 +555,66 @@ article span {
   margin: 0 auto 28px;
 }
 
+.legal-hero {
+  padding-bottom: 22px;
+}
+
+.legal-section {
+  padding-top: 34px;
+}
+
+.legal-card {
+  max-width: 880px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+.legal-card h2 {
+  margin: 28px 0 12px;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.legal-card h2:first-child {
+  margin-top: 0;
+}
+
+.legal-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.legal-card a {
+  color: var(--white-blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(56, 189, 248, 0.55);
+  text-underline-offset: 4px;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 42px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.site-footer a {
+  color: var(--white-blue);
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
@@ -594,8 +654,15 @@ article span {
   .hero,
   .section,
   .split-section,
-  .contact {
+  .contact,
+  .site-footer {
     width: min(100% - 28px, 1160px);
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
   }
 
   h1 {
