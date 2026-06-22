@@ -349,6 +349,10 @@ article p {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.project-link-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 article,
 .glass-box,
 .contact {
@@ -541,6 +545,53 @@ article span {
   font-size: clamp(3rem, 6vw, 5.8rem);
 }
 
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.project-meta span {
+  padding: 10px 12px;
+  color: var(--white-blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.mini-list {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mini-list li {
+  color: var(--white-blue);
+  line-height: 1.5;
+}
+
+.mini-list li::before {
+  content: "+";
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  margin-right: 9px;
+  place-items: center;
+  color: #02111f;
+  font-weight: 900;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--white-blue), var(--blue));
+}
+
+.decision-steps article {
+  min-height: 220px;
+}
+
 .contact {
   margin-bottom: 80px;
   padding: 56px;
@@ -638,6 +689,7 @@ article span {
   .services,
   .steps,
   .comparison-grid,
+  .project-link-grid,
   .topic-grid,
   .split-section {
     grid-template-columns: 1fr;
