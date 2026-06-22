@@ -291,7 +291,8 @@ article p {
 
 .feature-grid,
 .services,
-.steps {
+.steps,
+.comparison-grid {
   display: grid;
   gap: 18px;
 }
@@ -307,6 +308,10 @@ article p {
 .steps {
   grid-template-columns: repeat(4, 1fr);
   counter-reset: step;
+}
+
+.comparison-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 article,
@@ -352,6 +357,110 @@ article span {
   font-size: 1.05rem;
 }
 
+.showcase-section {
+  align-items: stretch;
+}
+
+.before-after-card {
+  display: grid;
+  gap: 18px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.11), transparent 48%),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.comparison-labels,
+.comparison-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.comparison-labels span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-preview > div {
+  min-height: 220px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.old-preview {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.old-preview span,
+.new-preview span {
+  display: block;
+  height: 16px;
+  border-radius: 999px;
+}
+
+.old-preview span {
+  background: rgba(174, 189, 210, 0.28);
+}
+
+.old-preview span:nth-child(1) {
+  width: 70%;
+}
+
+.old-preview span:nth-child(2) {
+  width: 92%;
+}
+
+.old-preview span:nth-child(3) {
+  width: 58%;
+}
+
+.new-preview {
+  display: grid;
+  align-content: end;
+  gap: 14px;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(56, 189, 248, 0.34), transparent 7rem),
+    rgba(56, 189, 248, 0.08);
+}
+
+.new-preview strong {
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+
+.new-preview span {
+  background: linear-gradient(90deg, var(--white-blue), var(--blue));
+}
+
+.new-preview span:nth-child(2) {
+  width: 88%;
+}
+
+.new-preview span:nth-child(3) {
+  width: 64%;
+}
+
+.before-after-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.customer-hero h1 {
+  font-size: clamp(3rem, 6vw, 5.8rem);
+}
+
 .contact {
   margin-bottom: 80px;
   padding: 56px;
@@ -387,6 +496,7 @@ article span {
   .feature-grid,
   .services,
   .steps,
+  .comparison-grid,
   .split-section {
     grid-template-columns: 1fr;
   }
@@ -424,5 +534,10 @@ article span {
 
   .score-card strong {
     font-size: 4rem;
+  }
+
+  .comparison-labels,
+  .comparison-preview {
+    grid-template-columns: 1fr;
   }
 }
