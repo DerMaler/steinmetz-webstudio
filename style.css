@@ -622,7 +622,8 @@ article {
 
 .premium-check-section {
   position: relative;
-  padding-top: 34px;
+  padding-top: 24px;
+  padding-bottom: 108px;
 }
 
 .premium-check-section::before {
@@ -646,11 +647,12 @@ article {
   border: 1px solid rgba(143, 204, 255, 0.34);
   border-radius: 8px;
   background:
+    radial-gradient(circle at 92% 8%, rgba(234, 247, 255, 0.14), transparent 13rem),
     linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(255, 255, 255, 0.045) 42%, rgba(2, 8, 18, 0.88)),
     rgba(4, 13, 29, 0.9);
   box-shadow:
-    0 34px 110px rgba(0, 0, 0, 0.46),
-    0 0 80px rgba(56, 189, 248, 0.18),
+    0 42px 130px rgba(0, 0, 0, 0.52),
+    0 0 104px rgba(56, 189, 248, 0.24),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(22px);
 }
@@ -677,6 +679,7 @@ article {
 
 .premium-check-heading h2 {
   max-width: 800px;
+  text-shadow: 0 0 34px rgba(56, 189, 248, 0.16);
 }
 
 .premium-check-heading p {
@@ -688,13 +691,14 @@ article {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
-  margin-top: 34px;
+  margin-top: 38px;
 }
 
 .check-card {
   grid-column: span 2;
   min-height: 238px;
   padding: 28px;
+  border-color: rgba(143, 204, 255, 0.26);
   background:
     linear-gradient(145deg, rgba(56, 189, 248, 0.16), rgba(255, 255, 255, 0.045) 44%, rgba(4, 16, 34, 0.76)),
     rgba(6, 18, 36, 0.84);
@@ -711,8 +715,8 @@ article {
 }
 
 .check-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(143, 204, 255, 0.48);
+  transform: translateY(-7px);
+  border-color: rgba(143, 204, 255, 0.58);
   background:
     linear-gradient(145deg, rgba(56, 189, 248, 0.22), rgba(255, 255, 255, 0.055) 48%, rgba(5, 18, 39, 0.88)),
     rgba(6, 18, 36, 0.9);
@@ -726,6 +730,10 @@ article {
   font-size: 1.18rem;
 }
 
+.check-card span {
+  box-shadow: 0 0 26px rgba(56, 189, 248, 0.18);
+}
+
 .check-card p {
   margin-bottom: 0;
 }
@@ -735,14 +743,16 @@ article {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-top: 22px;
-  padding: 28px;
-  border: 1px solid rgba(143, 204, 255, 0.28);
+  margin-top: 24px;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid rgba(143, 204, 255, 0.36);
   border-radius: 8px;
   background:
     radial-gradient(circle at 16% 0%, rgba(234, 247, 255, 0.18), transparent 13rem),
     linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(255, 255, 255, 0.045) 48%, rgba(2, 10, 22, 0.78));
-  box-shadow: 0 20px 64px rgba(14, 165, 233, 0.16);
+  box-shadow:
+    0 24px 72px rgba(14, 165, 233, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .check-cta h3 {
