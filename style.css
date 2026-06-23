@@ -525,6 +525,101 @@ article {
   margin-top: auto;
 }
 
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 8% 50% auto 50%;
+  z-index: -1;
+  width: 100vw;
+  height: 82%;
+  margin-left: -50vw;
+  background:
+    radial-gradient(circle at 22% 20%, rgba(56, 189, 248, 0.16), transparent 23rem),
+    radial-gradient(circle at 78% 56%, rgba(14, 165, 233, 0.12), transparent 26rem),
+    linear-gradient(180deg, rgba(3, 7, 18, 0), rgba(8, 19, 38, 0.56), rgba(3, 7, 18, 0));
+}
+
+.about-heading {
+  max-width: 860px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.about-copy {
+  position: relative;
+  overflow: hidden;
+  padding: 36px;
+  border: 1px solid rgba(143, 204, 255, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(56, 189, 248, 0.14), transparent 44%),
+    rgba(5, 16, 33, 0.82);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.about-copy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 34%),
+    radial-gradient(circle at 82% 18%, rgba(56, 189, 248, 0.22), transparent 8rem);
+}
+
+.about-copy p {
+  position: relative;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.about-card {
+  min-height: 210px;
+  background:
+    linear-gradient(145deg, rgba(56, 189, 248, 0.12), rgba(255, 255, 255, 0.035) 48%, rgba(6, 18, 36, 0.78)),
+    rgba(7, 20, 39, 0.78);
+  backdrop-filter: blur(16px);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(143, 204, 255, 0.38);
+  box-shadow:
+    0 28px 76px rgba(0, 0, 0, 0.34),
+    0 0 38px rgba(56, 189, 248, 0.16);
+}
+
+.about-card h3 {
+  color: var(--text);
+}
+
+.about-card p {
+  margin-bottom: 0;
+}
+
 article span {
   display: inline-flex;
   align-items: center;
@@ -852,6 +947,8 @@ article span {
   .project-link-grid,
   .topic-grid,
   .trust-strip,
+  .about-layout,
+  .about-card-grid,
   .split-section {
     grid-template-columns: 1fr;
   }
