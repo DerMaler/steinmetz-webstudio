@@ -54,12 +54,13 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
+  min-height: 118px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: min(1280px, calc(100% - 40px));
+  justify-content: flex-start;
+  width: 100%;
   margin: 0 auto;
-  padding: 14px 0;
+  padding: 14px clamp(22px, 6vw, 96px);
   backdrop-filter: blur(20px);
 }
 
@@ -96,6 +97,9 @@ a {
 }
 
 .nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   gap: 6px;
   max-width: 100%;
   padding: 7px;
@@ -1077,6 +1081,7 @@ article span {
     align-items: flex-start;
     gap: 18px;
     flex-direction: column;
+    min-height: auto;
   }
 
   .brand-logo {
@@ -1084,6 +1089,8 @@ article span {
   }
 
   .nav {
+    position: static;
+    transform: none;
     width: 100%;
     max-width: 100%;
     flex-wrap: wrap;
